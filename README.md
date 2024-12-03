@@ -1,15 +1,23 @@
 # Project4-ML
 
-# Outline Scope
+# Project Proposal: Analyzing the Impact of Remote Work on Mental Health
+### Project Objective:
+This project aims to analyze the impact of remote work on mental health using machine learning techniques. By leveraging data, we will work to uncover trends and relationships between remote work conditions, demographic factors, and mental health outcomes. The results will provide insights that can inform organizations on best practices for supporting employees' mental health in remote work environments.
 
-The proposal is essentially a brief summary of your interests and intent. Be sure to include the following details:
+## Dataset Overview:
+Source: The dataset, Impact_of_Remote_Work_on_Mental_Health.csv
+### Content:
 
-The kind of data you’d like to work with and the field you’re interested in (finance, healthcare surveys, etc.)
+Remote work habits 
 
-The questions you’ll ask of the data
+Mental health indicators 
 
-Possible source for the data
+Demographic details 
 
-Use the following example for guidance:
+Other factors (work-life balance, social interaction).
 
-The aim of our project is to uncover patterns in credit card fraud. We’ll examine relationships between transaction types and location, purchase prices and times of day, purchase trends over the course of a year, and other related relationships derived from the data.
+## Machine Learning Approach:
+### Supervised Learning:
+Build a classification model (logistic regression, decision tree, or random forest) to predict mental health outcomes (stressed vs. not stressed) based on survey data.
+### Unsupervised Learning:
+Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of remote workers who share similar characteristics and outcomes
