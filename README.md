@@ -18,7 +18,7 @@ Other factors
 
 ## Machine Learning Approach:
 ### Supervised Learning:
-Build a classification model (logistic regression, decision tree, or random forest) to predict mental health outcomes (stressed vs. not stressed) based on survey data.
+Build a classification model (logistic regression, decision tree, or random forest) to predict mental health outcomes (stressed vs. not stressed) based on data.
 ### Unsupervised Learning:
 Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of remote workers who share similar characteristics and outcomes
 
