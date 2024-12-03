@@ -14,7 +14,7 @@ Mental health indicators
 
 Demographic details 
 
-Other factors (work-life balance, social interaction).
+Other factors
 
 ## Machine Learning Approach:
 ### Supervised Learning:
