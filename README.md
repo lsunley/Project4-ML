@@ -1,18 +1,26 @@
 # Project4-ML
 
-# Project Proposal: Analyzing the Impact of Remote Work on Mental Health
+# Project Proposal: Analyzing what makes a credit applicant a risk
 ### Project Objective:
-This project aims to analyze the impact of remote work on mental health using machine learning techniques. By leveraging data, we will work to uncover trends and relationships between remote work conditions, demographic factors, and mental health outcomes. The results will provide insights that can inform organizations on best practices for supporting employees' mental health in remote work environments.
+This project aims to analyze traits that customers present when applying for credit and how likely are they to be risk or not based on prior applicants.
 
 ## Dataset Overview:
-Source: The dataset, Impact_of_Remote_Work_on_Mental_Health.csv
+Source: The dataset, application_record.csv, credit_record.csv
 ### Content:
 
-Remote work habits 
+Gender
 
-Mental health indicators 
+Own a Car
 
-Demographic details 
+Own Realty
+
+Income
+
+Family Members/Children
+
+Income type
+
+Education
 
 Other factors
 
@@ -23,4 +31,4 @@ Build a classification model (logistic regression, decision tree, or random fore
 Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of remote workers who share similar characteristics and outcomes
 
 ## Potential Impact:
-The project will provide valuable insights into the relationship between remote work and mental health, offering practical recommendations for organizations and policymakers to support employees in a rapidly evolving work environment.
+The project will provide valuable insights into the factors that are considered when determining if a new credit applicant is deemed a risk to accept.
