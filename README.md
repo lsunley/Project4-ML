@@ -1,20 +1,39 @@
 # Project4-ML
 
-# Project Proposal: Analyzing the Impact of Remote Work on Mental Health
+# Project Proposal: Analyzing the risk of credit card applicants
 ### Project Objective:
-This project aims to analyze the impact of remote work on mental health using machine learning techniques. By leveraging data, we will work to uncover trends and relationships between remote work conditions, demographic factors, and mental health outcomes. The results will provide insights that can inform organizations on best practices for supporting employees' mental health in remote work environments.
+This project focuses on analyzing and predicting the risk levels of credit card applicants based on their demographic, financial, and application-related features. By utilizing machine learning techniques, the goal is to identify applicants who are "risky" or "not risky" based on patterns from historical data.
 
 ## Dataset Overview:
-Source: The dataset, Impact_of_Remote_Work_on_Mental_Health.csv
+https://www.kaggle.com/code/rikdifos/credit-card-approval-prediction-using-ml
+
 ### Content:
+Gender
 
-Remote work habits 
+Age
 
-Mental health indicators 
+Education Level
 
-Demographic details 
+Marital Status
 
-Other factors
+Income Total
+
+Own Car (Yes/No)
+
+Own Realty (Yes/No)
+
+Family Members
+
+Employment Type
+
+Children Count
+
+Other Factos
+
+### Target Variable:
+"Risky"
+
+"Not Risky"
 
 ## Machine Learning Approach:
 ### Supervised Learning:
@@ -23,4 +42,4 @@ Build a classification model (logistic regression, decision tree, or random fore
 Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of remote workers who share similar characteristics and outcomes
 
 ## Potential Impact:
-The project will provide valuable insights into the relationship between remote work and mental health, offering practical recommendations for organizations and policymakers to support employees in a rapidly evolving work environment.
+This project helps financial institutions improve decision-making for credit card approvals by accurately identifying high-risk applicants while minimizing defaults. The goal is to produce fair and data-driven decisions for applicants, increasing approval rates for low-risk individuals. 
