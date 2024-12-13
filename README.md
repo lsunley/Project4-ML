@@ -63,8 +63,7 @@ Feature Completeness:
 By excluding only object columns and the target, the model now has access to more relevant numerical and categorical data (potentially after encoding), which contributes to its ability to capture patterns in the data.<br>
 Complex Relationships:
 More features allow the model to learn complex interactions between variables that were missing when only 5 high-IV features were used.<br>
-Diminished Feature Selection Bias:
-Relying only on high-IV features may exclude some important interactions or complementary features. Including all numeric columns mitigates this bias.<br>
+
 ![NN_ALL](images/NN_ALL.jpg)
 ![NN_ALL](images/NN_ALL_results.jpg)
 <br>
