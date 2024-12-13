@@ -37,9 +37,9 @@ Other Factos
 
 ## Machine Learning Approach:
 ### Supervised Learning:
-Build a classification model (logistic regression, decision tree, or random forest) to predict mental health outcomes (stressed vs. not stressed) based on data.
+Build a classification model (logistic regression, decision tree, random forest, and neural networks) to predict risk/no risk based on data.
 ### Unsupervised Learning:
-Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of remote workers who share similar characteristics and outcomes
+Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of risky and non risky applicants who share similar characteristics and outcomes
 
 ## Potential Impact:
 This project helps financial institutions improve decision-making for credit card approvals by accurately identifying high-risk applicants while minimizing defaults. The goal is to produce fair and data-driven decisions for applicants, increasing approval rates for low-risk individuals. 
