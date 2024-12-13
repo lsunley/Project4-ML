@@ -38,7 +38,7 @@ X: No loan for the month <br>
 1: 30-59 days past due  <br>
 
 ### Information Value (IV) and Weight of Evidence (WoE)
-We took all the categories and ran them through a function that determine IV values per category against the target column. 
+We took all the categories and ran them through a function that determined information values per category against the target column. 
 
 Purpose of Good and Bad Counts:
 Weight of Evidence (WoE):
