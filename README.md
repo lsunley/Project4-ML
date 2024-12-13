@@ -39,17 +39,14 @@ X: No loan for the month <br>
 
 ### Information Value (IV) and Weight of Evidence (WoE)
 We took all the categories and ran them through a function that determine IV values per category against the target column. 
-Key Features:
 
-# Calculates Good and Bad Distributions:
-Counts the total, good (e.g., target == 0), and bad (e.g., target == 1) records for each unique value in the feature.
+Purpose of Good and Bad Counts:
+Weight of Evidence (WoE):
+Compares the distribution of "good" and "bad" outcomes for each feature value.
+Helps in determining how well the feature separates the target classes.
 
-Outputs the IV score for the feature.
-Returns a DataFrame containing detailed statistics for each unique feature value.
-Outputs:
-IV Score: A single numeric value indicating the predictive strength of the feature.
-DataFrame: A detailed breakdown of WoE, IV, and related metrics for each unique value of the feature.
-
+Information Value (IV):
+Quantifies the predictive power of the feature by aggregating the differences between "good" and "bad" distributions across all feature values.
 
 ## Machine Learning Approach:
 ### Supervised Learning:
