@@ -5,28 +5,67 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Project3</title>
-  <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+  <title>Project4</title>
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
   <div class="container">
+
+
     <div class="row">
-      <div class="col-md-12 p-5 text-center bg-light">
-        <h1>Credit Card Approval Prediction Using Machine Learning</h1>
+      <!-- Image Section -->
+      <div class="col-md-12 text-center my-4">
+        <img src="{{ url_for('static', filename='../iframe_figures/card.jpg') }}" alt="Card Image" class="img-fluid"
+          style="width: 100%">
       </div>
     </div>
-    
-  <div></div>  
+
+    <div class="row">
+      <!-- IFrame Section -->
+      <div class="col-md-12 text-center">
+        <iframe src="{{ url_for('static', filename='../iframe_figures/figure_61.html') }}" width="800" height="600"
+          style="border:none;"></iframe>
+      </div>
 
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
+        <h3 class="text-center text-primary mb-4">Summary</h3>
+        <p class="text-justify">
+          After comparison, it is found that the best feature is the following feature in <strong>try2</strong>, and the
+          accuracy on the test set is <strong>0.9588</strong>.
+        </p>
+        <h4 class="text-secondary">Classifier Performance:</h4>
+        <ul class="list-group mb-3">
+          <li >
+            <strong>Class 0 (No Risk):</strong> The classifier achieved an accuracy of <strong>97% (0.97)</strong>,
+            meaning most samples with a true label of 0 (no risk) were correctly classified.
+          </li>
+          <li >
+            <strong>Class 1 (Have Risk):</strong> The classifier achieved a higher accuracy of <strong>94%
+              (0.94)</strong>, indicating stronger performance in identifying class 1 (have risk).
+          </li>
+        </ul>
+        <p >
+          The model demonstrates good overall performance, but the relatively high misclassification rate for class 0
+          indicates room for improvement.
+        </p>
+      </div>
+    </div>
+  </div>
 
+  <!-- External JavaScript Libraries -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Custom JavaScript -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 
 </html>
