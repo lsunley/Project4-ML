@@ -15,7 +15,7 @@ app = Flask(__name__)
 # MongoDB connection
 client = MongoClient(os.getenv("mongodb+srv://group_user:UTProj4@project4.ofsuk.mongodb.net/remote?retryWrites=true&w=majority"))
 db = client["remote"]
-collection = db["collectionName"]
+collection = db["records"]
 
 @app.route('/')
 def home():
