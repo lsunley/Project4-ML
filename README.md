@@ -8,19 +8,19 @@ This project focuses on analyzing and predicting the risk levels of credit card 
 https://www.kaggle.com/code/rikdifos/credit-card-approval-prediction-using-ml
 
 ### Characteristics:
-Gender
-Age
-Education Level
-Marital Status
-Income Total
-Income Type
-Housing Type
-Own Car (Yes/No)
-Own Realty (Yes/No)
-Own Phone (Yes/No)
-Family Members
-Employment Type
-Children Count
+Gender <br>
+Age<br>
+Education Level<br>
+Marital Status<br>
+Income Total<br>
+Income Type<br>
+Housing Type<br>
+Own Car (Yes/No)<br>
+Own Realty (Yes/No)<br>
+Own Phone (Yes/No)<br>
+Family Members<br>
+Employment Type<br>
+Children Count<br>
 Family Status
 
 ### Target Variable:
