@@ -32,10 +32,10 @@ Any of the applicants with the following:<br>
 5: Overdue or bad debts, write-offs for more than 150 days <br> <br>
 "Not Risky" <br>
 Any of the applicants with the following:<br>
-C: paid off that month 
-X: No loan for the month
-0: 1-29 days past due 
-1: 30-59 days past due 
+C: paid off that month  <br>
+X: No loan for the month <br>
+0: 1-29 days past due  <br>
+1: 30-59 days past due  <br>
 
 
 
