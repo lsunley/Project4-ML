@@ -40,30 +40,16 @@ X: No loan for the month <br>
 ### Information Value (IV) and Weight of Evidence (WoE)
 We took all the categories and ran them through a function that determine IV values per category against the target column. 
 Key Features:
-Handles Missing Values:
 
-For categorical features, missing values are replaced with "NULL".
-Ensures compatibility with categorical data types.
-Calculates Good and Bad Distributions:
-
+# Calculates Good and Bad Distributions:
 Counts the total, good (e.g., target == 0), and bad (e.g., target == 1) records for each unique value in the feature.
-Computes Statistical Metrics:
-
-Calculates proportions (e.g., share of values, bad rate).
-Computes Weight of Evidence (WoE) for each unique feature value.
-Calculates the Information Value (IV), which quantifies the predictive power of the feature.
-Prevents Division by Zero:
-
-Uses a small constant (epsilon) to avoid mathematical errors.
-Returns Results:
 
 Outputs the IV score for the feature.
 Returns a DataFrame containing detailed statistics for each unique feature value.
 Outputs:
 IV Score: A single numeric value indicating the predictive strength of the feature.
 DataFrame: A detailed breakdown of WoE, IV, and related metrics for each unique value of the feature.
-Usage:
-This function is designed for binary classification tasks to evaluate the relevance of categorical features. It can be integrated into feature selection pipelines or used for exploratory data analysis.
+
 
 ## Machine Learning Approach:
 ### Supervised Learning:
