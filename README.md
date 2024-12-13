@@ -24,9 +24,20 @@ Children Count<br>
 Family Status
 
 ### Target Variable:
-"Risky"
+"Risky" <br>
+Any of the applicants with the following:<br>
+2: 60-89 days overdue  <br>
+3: 90-119 days overdue  <br>
+4: 120-149 days overdue  <br>
+5: Overdue or bad debts, write-offs for more than 150 days <br> <br>
+"Not Risky" <br>
+Any of the applicants with the following:<br>
+C: paid off that month 
+X: No loan for the month
+0: 1-29 days past due 
+1: 30-59 days past due 
 
-"Not Risky"
+
 
 ## Machine Learning Approach:
 ### Supervised Learning:
