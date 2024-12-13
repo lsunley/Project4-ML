@@ -55,8 +55,8 @@ Build a classification model (logistic regression, decision tree, random forest,
 ## Neural Networks
 When we only ran target column against parameters with high information values it resulted in an accuracy of 65.31%.
 Suggests that ~35% of samples are misclassified, but it doesn't reveal if high-risk cases are disproportionately affected.
-!(images/NN_IV.jpg)
-!(images/NN_IV_Results.jpg)
+![NN_ALL]images/NN_IV.jpg)
+![NN_ALL](images/NN_IV_Results.jpg)
 <br>
 When we ran the target column against all parameters except id, Housing Type, and if they had a phone, work phone, or email the model improved resulting in 97.72%. <br>
 Feature Completeness:
@@ -65,8 +65,8 @@ Complex Relationships:
 More features allow the model to learn complex interactions between variables that were missing when only 5 high-IV features were used.<br>
 Diminished Feature Selection Bias:
 Relying only on high-IV features may exclude some important interactions or complementary features. Including all numeric columns mitigates this bias.
-!(images/NN_ALL.jpg)
-!(images/NN_ALL_results.jpg)
+![NN_ALL](images/NN_ALL.jpg)
+![NN_ALL](images/NN_ALL_results.jpg)
 
 ### Unsupervised Learning:
 Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of risky and non risky applicants who share similar characteristics and outcomes
