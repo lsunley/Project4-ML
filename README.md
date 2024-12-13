@@ -51,6 +51,10 @@ Quantifies the predictive power of the feature by aggregating the differences be
 ## Machine Learning Approach:
 ### Supervised Learning:
 Build a classification model (logistic regression, decision tree, random forest, and neural networks) to predict risk/no risk based on data.
+
+## Neural Networks
+![Ran with just high information value factors](images/NN_IV.jpg)
+
 ### Unsupervised Learning:
 Use clustering algorithms (K-means, hierarchical clustering) to identify distinct groups of risky and non risky applicants who share similar characteristics and outcomes
 
