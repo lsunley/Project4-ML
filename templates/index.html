@@ -36,15 +36,15 @@
       </div>
     </div>
     <div class="row flex-container1 mt-4">
-      <div class="col-md-4 elbow">
+      
+      <div class="col-md-6 elbow">
         <img src="{{ url_for('static', filename='../iframe_figures/char.jpg') }}" alt="Card Image" class="img-fluid">
       </div>
-      <div class="col-md-4 elbow ml-2">
+      <div class="col-md-6 elbow ml-2">
         <img src="{{ url_for('static', filename='../iframe_figures/target.jpg') }}" alt="Card Image" class="img-fluid">
       </div>
-      <div class="col-md-4 elbow ml-2">
-        <img src="{{ url_for('static', filename='../iframe_figures/var.jpg') }}" alt="Card Image" class="img-fluid">
-      </div>
+      
+      
     </div>
 
     <div class="row">
@@ -293,11 +293,22 @@
             more balanced, trades off accuracy to incorporate a wider range of features.</li>
         </ul>
       </div>
-
-      <div class="row mt-5">
-        <div class="col-md-6 text-center">
+      <div class="row flex-container1 mt-4">
+        <div class="col-md-6 elbow ml-2">
           <img src="{{ url_for('static', filename='../iframe_figures/vars.jpg') }}" alt="Card Image" class="img-fluid">
         </div>
+        
+        <div class="col-md-6 elbow ml-2">
+          <img src="{{ url_for('static', filename='../iframe_figures/var.jpg') }}" alt="Card Image" class="img-fluid">
+        </div>
+        
+      </div>
+      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
+        <h3 class="text-center text-primary mb-4">Conclusion</h3>
+        <p>
+          XGBoost and Neural Networks delivered the best results with high accuracy and balanced performance. Including all relevant features improved outcomes, while PCA-based clustering simplified the data for better efficiency. Decision Trees provided easy-to-understand results but relied too much on dominant features, while Random Forest improved balance but fell short of XGBoost. Combining models, like the Voting Classifier, helped stabilize predictions, highlighting the value of using multiple approaches for reliable risk assessment.
+          Certain features such as having a car, phone, or email as well as how many children a family had proved to be irrelavent information in determing the outcome while total income, family status, and age were bigger factors.
+        </p>
       </div>
 
     </div>
