@@ -53,11 +53,11 @@ Quantifies the predictive power of the feature by aggregating the differences be
 Build a classification model (logistic regression, decision tree, random forest, and neural networks) to predict risk/no risk based on data.
 - Logistic Regression, XGBoost and Voting Classifier
 ![image](https://github.com/user-attachments/assets/09766c36-4ac4-4b34-84e9-35729714ab68)
-The Logistic Regression model achieves an accuracy of 68%, while the XGBoost model performs significantly better with an accuracy of 95%. The Voting Classifier, which combines the predictions from both Logistic Regression and XGBoost, achieves an accuracy of 94%.
-The lower performance of Logistic Regression is due to its assumption of a linear relationship between features and target classes. As a result, it struggles with non-linear patterns in the data. In contrast, XGBoost is a tree-based model that excels at capturing complex, non-linear relationships and interactions between features, leading to higher accuracy.
-The Voting Classifier improves upon individual models by combining their complementary strengths:
-•	Logistic Regression contributes robustness in simpler patterns and stabilizes predictions.
-•	XGBoost contributes its power to learn complex patterns and reduce misclassifications.
+- The Logistic Regression model achieves an accuracy of 68%, while the XGBoost model performs significantly better with an accuracy of 95%. The Voting Classifier, which combines the predictions from both Logistic Regression and XGBoost, achieves an accuracy of 94%.
+- The lower performance of Logistic Regression is due to its assumption of a linear relationship between features and target classes. As a result, it struggles with non-linear patterns in the data. In contrast, XGBoost is a tree-based model that excels at capturing complex, non-linear relationships and interactions between features, leading to higher accuracy.
+- The Voting Classifier improves upon individual models by combining their complementary strengths:
+  •	Logistic Regression contributes robustness in simpler patterns and stabilizes predictions.
+  •	XGBoost contributes its power to learn complex patterns and reduce misclassifications.
 By leveraging both models, the Voting Classifier effectively reduces individual model weaknesses, providing a more balanced and robust decision boundary.
 
 
