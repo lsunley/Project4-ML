@@ -123,8 +123,6 @@
 
         </div>
       </div>
-
-
       <div class="mt-5 p-4 border rounded shadow-sm bg-light">
         <h3 class="text-center text-primary mb-4">Summary</h3>
         <ul class="list-group mb-3">
@@ -148,6 +146,46 @@
 
         </ul>
       </div>
+      <div class="row flex-container mt-4">
+        <!-- Image Section -->
+        <h3 class="text-center">Decision Tree</h3>
+        <div class="col-md-6 text-center">
+          <h4>Feature Importance - Trial 1</h4>
+          <img src="{{ url_for('static', filename='../iframe_figures/feature1.jpg') }}" alt="Card Image"
+            class="img-fluid">
+        </div>
+        <div class="col-md-6 text-center">
+          <h4>Feature Importance - Trial 2</h4>
+          <img src="{{ url_for('static', filename='../iframe_figures/feature2.jpg') }}" alt="Card Image"
+            class="img-fluid">
+
+        </div>
+
+        <div class="row flex-container mt-4">
+          <!-- Image Section -->
+          <div class="col-md-6 text-center">
+            <h4>Decision Tree - Trial 2</h4>
+            <img src="{{ url_for('static', filename='../iframe_figures/tree1.jpg') }}" alt="Card Image"
+              class="img-fluid">
+          </div>
+          <div class="col-md-6 text-center">
+            <h4>Decision Tree - Trial 2</h4>
+            <img src="{{ url_for('static', filename='../iframe_figures/tree2.jpg') }}" alt="Card Image"
+              class="img-fluid">
+          </div>
+
+        </div>
+      </div>
+
+      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
+        <h3 class="text-center text-primary mb-4">Summary</h3>
+        <ul class="list-group mb-3">
+          <li><strong>Trial 1:</strong> The model achieved an overall accuracy of 66%. It performed better in identifying class 1 (Yes) with a recall of 83%, compared to class 0 (No) with a recall of 48%. Misclassification rates were 51.58% for class 0 misclassified as class 1 and 16.99% for class 1 misclassified as class 0.</li>
+          <li><strong>Trial 2:</strong> The model achieved an overall accuracy of 80%. It performed equally well at identifying both class 0 (No) and class 1 (Yes), with precision, recall, and F1-scores all at 80%. Misclassification rates were 19.83% for class 0 misclassified as class 1 and 20.21% for class 1 misclassified as class 0. While balanced, the model can benefit from reducing misclassification rates to further improve performance</li>
+          <li>Tree 1 achieves higher accuracy due to its reliance on a single dominant feature, while Tree 2, though more balanced, trades off accuracy to incorporate a wider range of features.</li>
+        </ul>
+      </div>
+      
       
       <div class="row mt-5">
         <h3 class="text-center">Elbow Curve Analysis for Optimal K</h3>
