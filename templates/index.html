@@ -25,38 +25,138 @@
         <img src="{{ url_for('static', filename='../iframe_figures/card.jpg') }}" alt="Card Image" class="img-fluid"
           style="width: 100%">
       </div>
+      <div>
+        <p class="text-center">
+          This project focuses on analyzing and predicting the risk levels of credit card applicants based on their
+          demographic, financial, and application-related features. By utilizing machine learning techniques, the goal
+          is to identify applicants who are "risky" or "not risky" based on patterns from historical data.
+          To clean up the data we started with adjusting the ‘Status’ column into yes and no values in order for that to
+          be our target variable in the machine learning models. We ran each category through a function which checked how often good things (yes) and bad things (no) happen, and then gives a score (called IV or information value) to show how useful that column is for making predictions.
+        </p>
+      </div>
+    </div>
+    <div class="row flex-container1 mt-4">
+      <div class="col-md-4 elbow">
+        <img src="{{ url_for('static', filename='../iframe_figures/char.jpg') }}" alt="Card Image" class="img-fluid">
+      </div>
+      <div class="col-md-4 elbow ml-2">
+        <img src="{{ url_for('static', filename='../iframe_figures/target.jpg') }}" alt="Card Image" class="img-fluid">
+      </div>
+      <div class="col-md-4 elbow ml-2">
+        <img src="{{ url_for('static', filename='../iframe_figures/var.jpg') }}" alt="Card Image" class="img-fluid">
+      </div>
     </div>
 
     <div class="row">
 
       <!-- IFrame Section -->
-      <div class="col-md-12 text-center">
-        <iframe src="{{ url_for('static', filename='../iframe_figures/figure_63.html') }}" width="800" height="600"
-          style="border:none;"></iframe>
+
+      <div class="row mt-5">
+        <h3 class="text-center">Elbow Curve Analysis for Optimal K</h3>
+        <div class="col-md-12 text-center">
+          <img src="{{ url_for('static', filename='../iframe_figures/Elbow.jpg') }}" alt="Card Image" class="img-fluid">
+        </div>
       </div>
 
+      <!-- Flex Container for Elbow Explanation -->
+      <div class="row flex-container1 mt-4">
+        <div class="col-md-6 elbow">
+          <h4>Elbow Curve (Credits Data):</h4>
+          <p>
+            There is a flattening point (elbow) observed around k = 5 or 6, suggesting this is the optimal number of
+            clusters.
+            Beyond this point, the decrease in inertia becomes less significant. Therefore, the best K is 5 at this
+            point.
+          </p>
+        </div>
+        <div class="col-md-6 elbow ml-2">
+          <h4>Elbow Curve (PCA-transformed Data):</h4>
+          <p>
+            Similar to the left plot, this analysis is performed on PCA-reduced data. The curve also flattens around k =
+            5 or 6,
+            reinforcing that 5 or 6 clusters might be the best choice for the PCA-reduced dataset.
+          </p>
+        </div>
+      </div>
 
-      <div class=" p-4 border rounded shadow-sm bg-light">
+      <!-- Final Summary -->
+      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
         <h3 class="text-center text-primary mb-4">Summary</h3>
-        <p class="text-justify">
-          After comparison, it is found that the best feature is the following feature in <strong>try2</strong>, and the
-          accuracy on the test set is <strong>0.9588</strong>.
-        </p>
-        <h4 class="text-secondary">Classifier Performance:</h4>
+        <ul class="list-group mb-3">
+          <li>The optimal number of clusters (k) for both raw and PCA-transformed data is likely 5 or 6.</li>
+          <li>PCA simplifies the feature space, improving computational efficiency and possibly cluster separation.</li>
+        </ul>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+          <img src="{{ url_for('static', filename='../iframe_figures/Cluster.jpg') }}" alt="Card Image"
+            class="img-fluid">
+        </div>
+      </div>
+      <div class="row flex-container1 mt-4">
+        <div class="col-md-6 elbow">
+          <h4>Cluster Crypto:</h4>
+          <p>
+            The clusters overlap in several areas, but there are some distinct groupings, particularly in regions with
+            higher income and fewer days since birth.
+          </p>
+        </div>
+        <div class="col-md-6 elbow ml-2">
+          <h4>Cluster PCA:</h4>
+          <p>
+            Clusters in the PCA space are more distinct and better separated compared to the raw data plot, indicating
+            improved clustering results after dimensionality reduction.
+          </p>
+        </div>
+      </div>
+      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
+        <h3 class="text-center text-primary mb-4">Summary</h3>
+
         <ul class="list-group mb-3">
           <li>
-            <strong>Class 0 (No Risk):</strong> The classifier achieved an accuracy of <strong>97% (0.97)</strong>,
-            meaning most samples with a true label of 0 (no risk) were correctly classified.
+            The PCA-transformed space (right plot) demonstrates better separation of clusters compared to the raw
+            feature space (left plot), likely due to reduced noise and improved representation of variance.
+          </li>
+
+        </ul>
+
+      </div>
+      <div class="row flex-container mt-4">
+        <!-- Image Section -->
+        <h3 class="text-center">Random Forest</h3>
+        <div class="col-md-6 text-center">
+          <h4>Random Forest - Trial 1</h4>
+          <img src="{{ url_for('static', filename='../iframe_figures/random1.jpg') }}" alt="Card Image"
+            class="img-fluid">
+        </div>
+        <div class="col-md-6 text-center">
+          <h4>Random Forest - Trial 2</h4>
+          <img src="{{ url_for('static', filename='../iframe_figures/random2.jpg') }}" alt="Card Image"
+            class="img-fluid">
+
+        </div>
+      </div>
+      <div class=" p-4 border rounded shadow-sm bg-light">
+        <h3 class="text-center text-primary mb-4">Summary</h3>
+        <ul class="list-group mb-3">
+          <li>
+            In Test 1, we selected over 30 key columns, including those related to economic status and family factors,
+            to serve as predictors in a Random Forest-based model. The model achieved an accuracy of 98% in predicting
+            “No Risk” and 97% in predicting “Risk,” resulting in an overall accuracy of 97.7%.
           </li>
           <li>
-            <strong>Class 1 (Have Risk):</strong> The classifier achieved a higher accuracy of <strong>94%
-              (0.94)</strong>, indicating stronger performance in identifying class 1 (have risk).
+            To enhance the precision, Test 2 incorporated all available columns from the dataset for training. The
+            results demonstrated that the accuracy for both “No Risk” and “Risk” predictions remained consistent across
+            the tests. This comparison affirmed the robustness and predictive reliability of the model
+          </li>
+          <li>
+            Furthermore, a feature importance analysis conducted using the Random Forest algorithm identified three
+            columns with significant influence on credit card approval decisions and the classification of high-risk
+            users: job tenure, age, and the month when credit card delinquency first occurred. These insights provide a
+            valuable foundation for improving credit risk assessment and optimizing the credit card approval process.
           </li>
         </ul>
-        <p>
-          The model demonstrates good overall performance, but the relatively high misclassification rate for class 0
-          indicates room for improvement.
-        </p>
       </div>
       <div class="row mt-5">
         <h3 class="text-center">Logistic Regression, XGBoost, Voting Classifier</h3>
@@ -164,7 +264,7 @@
         <div class="row flex-container mt-4">
           <!-- Image Section -->
           <div class="col-md-6 text-center">
-            <h4>Decision Tree - Trial 2</h4>
+            <h4>Decision Tree - Trial 1</h4>
             <img src="{{ url_for('static', filename='../iframe_figures/tree1.jpg') }}" alt="Card Image"
               class="img-fluid">
           </div>
@@ -180,84 +280,22 @@
       <div class="mt-5 p-4 border rounded shadow-sm bg-light">
         <h3 class="text-center text-primary mb-4">Summary</h3>
         <ul class="list-group mb-3">
-          <li><strong>Trial 1:</strong> The model achieved an overall accuracy of 66%. It performed better in identifying class 1 (Yes) with a recall of 83%, compared to class 0 (No) with a recall of 48%. Misclassification rates were 51.58% for class 0 misclassified as class 1 and 16.99% for class 1 misclassified as class 0.</li>
-          <li><strong>Trial 2:</strong> The model achieved an overall accuracy of 80%. It performed equally well at identifying both class 0 (No) and class 1 (Yes), with precision, recall, and F1-scores all at 80%. Misclassification rates were 19.83% for class 0 misclassified as class 1 and 20.21% for class 1 misclassified as class 0. While balanced, the model can benefit from reducing misclassification rates to further improve performance</li>
-          <li>Tree 1 achieves higher accuracy due to its reliance on a single dominant feature, while Tree 2, though more balanced, trades off accuracy to incorporate a wider range of features.</li>
-        </ul>
-      </div>
-      
-      
-      <div class="row mt-5">
-        <h3 class="text-center">Elbow Curve Analysis for Optimal K</h3>
-        <div class="col-md-12 text-center">
-          <img src="{{ url_for('static', filename='../iframe_figures/Elbow.jpg') }}" alt="Card Image" class="img-fluid">
-        </div>
-      </div>
-
-      <!-- Flex Container for Elbow Explanation -->
-      <div class="row flex-container1 mt-4">
-        <div class="col-md-6 elbow">
-          <h4>Elbow Curve (Credits Data):</h4>
-          <p>
-            There is a flattening point (elbow) observed around k = 5 or 6, suggesting this is the optimal number of
-            clusters.
-            Beyond this point, the decrease in inertia becomes less significant. Therefore, the best K is 5 at this
-            point.
-          </p>
-        </div>
-        <div class="col-md-6 elbow ml-2">
-          <h4>Elbow Curve (PCA-transformed Data):</h4>
-          <p>
-            Similar to the left plot, this analysis is performed on PCA-reduced data. The curve also flattens around k =
-            5 or 6,
-            reinforcing that 5 or 6 clusters might be the best choice for the PCA-reduced dataset.
-          </p>
-        </div>
-      </div>
-
-      <!-- Final Summary -->
-      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
-        <h3 class="text-center text-primary mb-4">Summary</h3>
-        <ul class="list-group mb-3">
-          <li>The optimal number of clusters (k) for both raw and PCA-transformed data is likely 5 or 6.</li>
-          <li>PCA simplifies the feature space, improving computational efficiency and possibly cluster separation.</li>
+          <li><strong>Trial 1:</strong> The model achieved an overall accuracy of 66%. It performed better in
+            identifying class 1 (Yes) with a recall of 83%, compared to class 0 (No) with a recall of 48%.
+            Misclassification rates were 51.58% for class 0 misclassified as class 1 and 16.99% for class 1
+            misclassified as class 0.</li>
+          <li><strong>Trial 2:</strong> The model achieved an overall accuracy of 80%. It performed equally well at
+            identifying both class 0 (No) and class 1 (Yes), with precision, recall, and F1-scores all at 80%.
+            Misclassification rates were 19.83% for class 0 misclassified as class 1 and 20.21% for class 1
+            misclassified as class 0. While balanced, the model can benefit from reducing misclassification rates to
+            further improve performance</li>
+          <li>Tree 1 achieves higher accuracy due to its reliance on a single dominant feature, while Tree 2, though
+            more balanced, trades off accuracy to incorporate a wider range of features.</li>
         </ul>
       </div>
 
-      <div class="row mt-5">
-        <div class="col-md-12 text-center">
-          <img src="{{ url_for('static', filename='../iframe_figures/Cluster.jpg') }}" alt="Card Image"
-            class="img-fluid">
-        </div>
-      </div>
-      <div class="row flex-container1 mt-4">
-        <div class="col-md-6 elbow">
-          <h4>Cluster Crypto:</h4>
-          <p>
-            The clusters overlap in several areas, but there are some distinct groupings, particularly in regions with
-            higher income and fewer days since birth.
-          </p>
-        </div>
-        <div class="col-md-6 elbow ml-2">
-          <h4>Cluster PCA:</h4>
-          <p>
-            Clusters in the PCA space are more distinct and better separated compared to the raw data plot, indicating
-            improved clustering results after dimensionality reduction.
-          </p>
-        </div>
-      </div>
-      <div class="mt-5 p-4 border rounded shadow-sm bg-light">
-        <h3 class="text-center text-primary mb-4">Summary</h3>
 
-        <ul class="list-group mb-3">
-          <li>
-            The PCA-transformed space (right plot) demonstrates better separation of clusters compared to the raw
-            feature space (left plot), likely due to reduced noise and improved representation of variance.
-          </li>
 
-        </ul>
-
-      </div>
     </div>
 
     <!-- External JavaScript Libraries -->
